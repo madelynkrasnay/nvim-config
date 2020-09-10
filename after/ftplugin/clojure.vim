@@ -63,3 +63,4 @@ command! ClojureInsertNs call append(0, clojure#ns_decl())
 
 nnoremap <buffer> <LocalLeader>gt :ClojureGoToTest<cr>
 nnoremap <buffer> <LocalLeader>n :ClojureInsertNs<cr>
+nnoremap <buffer> <LocalLeader>cp :ConjurePiggieback (figwheel.main.api/repl-env "dev")<cr>

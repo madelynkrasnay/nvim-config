@@ -52,9 +52,6 @@ Plug 'sheerun/vim-polyglot'
 " Async Linter support
 "
 " Also run: brew install borkdude/brew/clj-kondo
-"
-" These are automatically recognized by ALE
-"
 Plug 'dense-analysis/ale'
 
 " Clojure REPL support
@@ -69,6 +66,19 @@ Plug 'Olical/aniseed', { 'tag': 'v3.6.1' }
 " Fennel, a Clojure-like LISP that compiles to Lua
 Plug 'bakpakin/fennel.vim'
 
+
+
+"------------------------------------------------------------
+" Productivity
+"
+
+" Show calendars, integrates with vimwiki
+Plug 'mattn/calendar-vim'
+
+" Vim Wiki
+"
+" <leader>ww to open the wiki
+Plug 'vimwiki/vimwiki'
 
 
 "------------------------------------------------------------
@@ -104,10 +114,8 @@ Plug 'tpope/vim-dadbod'
 "
 Plug 'SirVer/ultisnips'
 
-" Vim Wiki
-"
-" <leader>ww to open the wiki
-Plug 'vimwiki/vimwiki'
+" Floating Terminal
+Plug 'voldikss/vim-floaterm'
 
 call plug#end()
 

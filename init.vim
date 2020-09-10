@@ -1,8 +1,9 @@
 " init.vim
 "
 " Resources
-" - http://learnvimscriptthehardway.stevelosh.com/
+" - https://vimways.org/2018/from-vimrc-to-vim/
 " - https://github.com/ChristianChiarulli/nvim/blob/master/init.vim
+" - http://learnvimscriptthehardway.stevelosh.com/
 
 runtime plugins.vim
 runtime mappings.vim
@@ -72,3 +73,12 @@ let g:sql_type_default = 'pgsql'
 
 " rainbow
 let g:rainbow_active = 1
+let g:rainbow_conf = {'separately': { 'vimwiki': 0 }}
+colorscheme gruvbox
+
+" vimwiki
+let g:vimwiki_list = [{'path': '~/Dropbox/vimwiki/',
+                     \ 'links_space_char': '-'}]
+let g:vimwiki_auto_header = 1
+
+silent! source .project.vim

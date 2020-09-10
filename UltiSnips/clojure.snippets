@@ -10,12 +10,22 @@ snippet ;;-
 ;;
 endsnippet
 
+snippet clj
+#?(:clj
+   $0)
+endsnippet
+
+snippet cljs
+#?(:cljs
+   $0)
+endsnippet
+
 snippet jdbc
 (jdbc/with-db-transaction [db-conn db-pool]
   $0)
 endsnippet
 
-snippet reg-endpoint
+snippet rep
 (reg-endpoint
   :${1:module}/${2:endpoint}
   {:path "/api/path/to/$2"
@@ -25,7 +35,7 @@ snippet reg-endpoint
           #?@(:clj [:handler (request-data/fn->handler $2)])}})
 endsnippet
 
-snippet reg-event-db
+snippet redb
 (rf/reg-event-fx
   :${1:module}/${2:event}
   (fn [db _]
@@ -33,21 +43,28 @@ snippet reg-event-db
     db))
 endsnippet
 
-snippet reg-event-fx
+snippet refx
 (rf/reg-event-fx
   :${1:module}/${2:event}
   (fn [{:keys [db]} _]
     $0))
 endsnippet
 
-snippet reg-page
+snippet rpage
 (reg-page
   :${1:module}/${2:page}
   {:path "/ui/$2"
    :auth :user
-   :title [$1 $2 :title]
+   :title [:$1 :$2 :title]
    #?@(:cljs [:init :$1/$2-init
               :render $2])})
+endsnippet
+
+snippet rsub
+(rf/reg-sub
+  :${1:event}
+  (fn [db _]
+    $0))
 endsnippet
 
 snippet rq-build

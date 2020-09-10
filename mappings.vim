@@ -1,3 +1,5 @@
+" Key Mappings
+
 inoremap jj <Esc>
 
 let mapleader = " "
@@ -29,6 +31,15 @@ inoremap <expr> <C-k> pumvisible() ? "\<c-p>" : "\<c-k>"
 nnoremap <C-j> :cn<CR>
 nnoremap <C-k> :cp<CR>
 
+" Use shift + hjkl to resize windows
+nnoremap <silent> <s-down>  :resize -2<CR>
+nnoremap <silent> <s-up>    :resize +2<CR>
+nnoremap <silent> <s-left>  :vertical resize -2<CR>
+nnoremap <silent> <s-right> :vertical resize +2<CR>
+
+" Hide the floating terminal
+tnoremap <c-x> <c-\><c-n>:FloatermHide<cr>
+
 
 "============================================================
 " Spacemacs/Spacevim inspired mappings
@@ -48,13 +59,16 @@ nnoremap <leader>bz :Clap buffers<cr>
 
 nnoremap <leader>ft :NERDTreeToggle<cr>
 nnoremap <leader>ff :NERDTreeFind<cr>
+nnoremap <leader>fl :FloatermNew lf<cr>
 nnoremap <leader>fz :Clap files<cr>
 
 "------------------------------------------------------------
-" Table commands SPC t...
+" Terminal (Floaterm) commands SPC t...
 "------------------------------------------------------------
 
-nnoremap <leader>t\| :Tabularize /\|<cr>
+nnoremap <leader>tn :FloatermNew<cr>
+nnoremap <leader>tt :FloatermToggle<cr>
+nnoremap <leader>tz :Clap floaterm<cr>
 
 "------------------------------------------------------------
 " Vimrc commands SPC v...
