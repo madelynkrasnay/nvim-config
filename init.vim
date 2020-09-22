@@ -20,6 +20,7 @@ set ignorecase                      " ...when searching
 set incsearch                       " Find matches while typing
 set laststatus=2                    " Always show the status line
 set lazyredraw                      " Improves Clojure editing format
+set nowrap                          " Disable virtual line wrapping
 set number                          " Show line numbers
 set scrolloff=2                     " Min lines to show around cursor while searching
 set shiftwidth=4                    " Amount by which to indent
@@ -52,6 +53,10 @@ let g:airline_theme='tomorrow'
 " ale
 let g:ale_linters = {'clojure': ['clj-kondo']} " Disable Joker linting
 
+" conjure
+" fix lagginess with deoplete completions
+let g:conjure#client#clojure#nrepl#completion#with_context = v:false
+
 " dadbod
 let g:db = 'postgresql://erbium:password@localhost/'
 
@@ -63,6 +68,10 @@ set completeopt-=preview
 let g:float_preview#docked = 1
 let g:float_preview#max_width = 120
 let g:float_preview#max_height = 40 " Still shows truncated docs for Clojure functions. Conjure problem?
+
+" lightline
+let g:lightline = {}
+let g:lightline.colorscheme = 'gruvbox'
 
 " NERDTree
 let NERDTreeQuitOnOpen=1

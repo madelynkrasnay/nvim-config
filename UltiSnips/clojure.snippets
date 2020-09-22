@@ -21,7 +21,7 @@ snippet cljs
 endsnippet
 
 snippet jdbc
-(jdbc/with-db-transaction [db-conn db-pool]
+(jdbc/with-db-transaction [db-conn (req/db-pool req)]
   $0)
 endsnippet
 

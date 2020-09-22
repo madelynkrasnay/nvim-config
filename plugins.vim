@@ -11,8 +11,10 @@ Plug 'flazz/vim-colorschemes'
 Plug 'luochen1990/rainbow'
 
 " Fancy status line
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
+"Plug 'vim-airline/vim-airline'
+"Plug 'vim-airline/vim-airline-themes'
+Plug 'itchyny/lightline.vim'
+Plug 'shinchu/lightline-gruvbox.vim'
 
 
 "------------------------------------------------------------
@@ -55,7 +57,7 @@ Plug 'sheerun/vim-polyglot'
 Plug 'dense-analysis/ale'
 
 " Clojure REPL support
-Plug 'Olical/conjure', {'tag': 'v4.3.1'}
+Plug 'Olical/conjure', {'tag': 'v4.5.0'}
 
 " Support for s-expressions
 Plug 'guns/vim-sexp'
