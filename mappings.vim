@@ -37,6 +37,9 @@ nnoremap <silent> <s-up>    :resize +2<CR>
 nnoremap <silent> <s-left>  :vertical resize -2<CR>
 nnoremap <silent> <s-right> :vertical resize +2<CR>
 
+" Escape insert mode in the terminal
+tnoremap <esc> <c-\><c-n>
+
 " Hide the floating terminal
 tnoremap <c-x> <c-\><c-n>:FloatermHide<cr>
 

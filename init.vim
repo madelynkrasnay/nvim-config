@@ -41,8 +41,10 @@ augroup local
     " Trim trailing whitespace on save
     autocmd BufWritePre * :%s/\s\+$//e
 
-augroup END
+    " Don't kill terminals when buffer hidden
+    autocmd TermOpen * setlocal bufhidden=hide
 
+augroup END
 
 " --- Plugin Configs ---
 
