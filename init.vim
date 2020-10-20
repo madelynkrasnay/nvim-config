@@ -42,7 +42,7 @@ augroup local
     autocmd BufWritePre * :%s/\s\+$//e
 
     " Don't kill terminals when buffer hidden
-    autocmd TermOpen * setlocal bufhidden=hide
+    autocmd TermOpen * setlocal bufhidden=hide nonumber
 
 augroup END
 

@@ -57,13 +57,13 @@ Plug 'sheerun/vim-polyglot'
 Plug 'dense-analysis/ale'
 
 " Clojure REPL support
-Plug 'Olical/conjure', {'tag': 'v4.5.0'}
+Plug 'Olical/conjure', {'tag': 'v4.6.0'}
 
 " Support for s-expressions
 Plug 'guns/vim-sexp'
 
 " Write plugins in Fennel
-Plug 'Olical/aniseed', { 'tag': 'v3.6.1' }
+Plug 'Olical/aniseed', { 'tag': 'v3.8.0' }
 
 " Fennel, a Clojure-like LISP that compiles to Lua
 Plug 'bakpakin/fennel.vim'
