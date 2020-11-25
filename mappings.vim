@@ -11,10 +11,6 @@ nnoremap <silent> <localleader> :<c-u>WhichKey  ','<CR>
 cnoremap <c-a> <home>
 cnoremap <c-e> <end>
 
-" Normally, <c-w>v clones the current buffer
-" This causes it to create a new, blank window to the right
-nnoremap <c-w>v :vnew<cr>
-
 " Map omnicomplete to Ctrl-Space
 inoremap <c-space> <c-x><c-o>
 
@@ -23,13 +19,11 @@ nnoremap \ :noh<cr>
 
 " Mappings to quickly move through the results
 "
-" If a popup menu is visible (e.g. via autocomplete) then these
-" move between entries, else moves between the results in the
-" quickfix window, such as that shown by :Ag.
-inoremap <expr> <C-j> pumvisible() ? "\<c-n>" : "\<c-j>"
-inoremap <expr> <C-k> pumvisible() ? "\<c-p>" : "\<c-k>"
-nnoremap <C-j> :cn<CR>
-nnoremap <C-k> :cp<CR>
+" Move quickly between windows
+nnoremap <C-h> <c-w>h
+nnoremap <C-j> <c-w>j
+nnoremap <C-k> <c-w>k
+nnoremap <C-l> <c-w>l
 
 " Use shift + hjkl to resize windows
 nnoremap <silent> <s-down>  :resize -2<CR>
@@ -49,6 +43,20 @@ tnoremap <c-x> <c-\><c-n>:FloatermHide<cr>
 "
 " Let this be the way forward!
 "============================================================
+
+"------------------------------------------------------------
+" ALE commands SPC a...
+"------------------------------------------------------------
+"
+nnoremap <silent> <leader>an :ALENext<cr>
+nnoremap <silent> <leader>ap :ALEPrevious<cr>
+
+"------------------------------------------------------------
+" Quickfix commands SPC c...
+"------------------------------------------------------------
+"
+nnoremap <silent> <leader>cn :cn<cr>
+nnoremap <silent> <leader>cp :cp<cr>
 
 "------------------------------------------------------------
 " Buffer commands SPC b...
@@ -72,34 +80,4 @@ nnoremap <leader>fz :Clap files<cr>
 nnoremap <leader>tn :FloatermNew<cr>
 nnoremap <leader>tt :FloatermToggle<cr>
 nnoremap <leader>tz :Clap floaterm<cr>
-
-"------------------------------------------------------------
-" Vimrc commands SPC v...
-"------------------------------------------------------------
-
-nnoremap <leader>ve :vsplit $MYVIMRC<cr>
-nnoremap <leader>vr :source $MYVIMRC<cr>
-
-"------------------------------------------------------------
-" Window commands SPC w...
-"------------------------------------------------------------
-
-" Jump to window
-nnoremap <leader>wh <c-w>h
-nnoremap <leader>wj <c-w>j
-nnoremap <leader>wk <c-w>k
-nnoremap <leader>wl <c-w>l
-
-" Move window
-nnoremap <leader>wH <c-w>H
-nnoremap <leader>wJ <c-w>J
-nnoremap <leader>wK <c-w>K
-nnoremap <leader>wL <c-w>L
-
-nnoremap <leader>wo <c-w>o
-
-nnoremap <leader>wn :new<cr>
-nnoremap <leader>wv :vnew<cr>
-
-nnoremap <leader>w= <c-w>=
 

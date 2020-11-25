@@ -13,7 +13,7 @@ filetype plugin indent on
 syntax on
 
 set background=dark
-set clipboard=unnamedplus           " Use the system clipboard for yank/put
+set completeopt+=menuone            " Show complete menu even with just one item
 set cursorline                      " Highlight the current line
 set expandtab                       " Expand tabs to spaces
 set ignorecase                      " ...when searching
