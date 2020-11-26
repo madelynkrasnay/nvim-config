@@ -28,7 +28,7 @@ set smartcase                       " Ignore ignorecase if pattern has uppercase
 set softtabstop=-1                  " -1 = use shiftwidth
 set spelllang=en_ca                 " I am Canadian!
 set splitright                      " Open vertical splits on the right
-set t_Co=256                        " Use 256 terminal colours
+set termguicolors                   " Enables 24-bit RGB color in the TUI
 set wildmode=longest,list           " Wildcard completion
 
 augroup local
