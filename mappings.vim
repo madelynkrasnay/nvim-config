@@ -8,6 +8,12 @@ let maplocalleader = ","
 nnoremap <silent> <leader>      :<c-u>WhichKey '<Space>'<CR>
 nnoremap <silent> <localleader> :<c-u>WhichKey  ','<CR>
 
+" System clipboard
+inoremap <c-v> <c-r>+
+nnoremap <c-v> "+p
+vnoremap <c-c> "+y
+vnoremap <c-v> c<c-r>+<esc>
+
 cnoremap <c-a> <home>
 cnoremap <c-e> <end>
 
