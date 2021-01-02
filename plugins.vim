@@ -40,6 +40,9 @@ Plug 'rking/ag.vim'
 " Deoplete autocompleter
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 
+" Show current functions in echo area (does it work with Clojure?)
+Plug 'Shougo/echodoc.vim'
+
 " Show autocomplete preview in NeoVim's floating window
 Plug 'ncm2/float-preview.nvim'
 
@@ -57,7 +60,7 @@ Plug 'sheerun/vim-polyglot'
 Plug 'dense-analysis/ale'
 
 " Clojure REPL support
-Plug 'Olical/conjure', {'tag': 'v4.6.0'}
+Plug 'Olical/conjure', {'tag': 'v4.11.0'}
 
 " Support for s-expressions
 Plug 'guns/vim-sexp'
