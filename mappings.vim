@@ -10,9 +10,7 @@ nnoremap <silent> <localleader> :<c-u>WhichKey  ','<CR>
 
 " System clipboard
 inoremap <c-v> <c-r>+
-nnoremap <c-v> "+p
 vnoremap <c-c> "+y
-vnoremap <c-v> c<c-r>+<esc>
 
 cnoremap <c-a> <home>
 cnoremap <c-e> <end>
@@ -39,6 +37,9 @@ nnoremap <silent> <s-right> :vertical resize +2<CR>
 
 " Escape insert mode in the terminal
 tnoremap <esc> <c-\><c-n>
+
+" Format tables using pipe separators
+vnoremap \| :Tab /\|<cr>
 
 " Hide the floating terminal
 tnoremap <c-x> <c-\><c-n>:FloatermHide<cr>
