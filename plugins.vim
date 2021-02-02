@@ -31,6 +31,9 @@ Plug 'liuchengxu/vim-clap', { 'do': ':Clap install-binary!' }
 " https://github.com/ggreer/the_silver_searcher
 Plug 'rking/ag.vim'
 
+" Advanced search/replace
+" Opens search results in editable window
+Plug 'dyng/ctrlsf.vim'
 
 
 "------------------------------------------------------------
@@ -39,9 +42,6 @@ Plug 'rking/ag.vim'
 
 " Deoplete autocompleter
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-
-" Show current functions in echo area (does it work with Clojure?)
-Plug 'Shougo/echodoc.vim'
 
 " Show autocomplete preview in NeoVim's floating window
 Plug 'ncm2/float-preview.nvim'
@@ -60,7 +60,7 @@ Plug 'sheerun/vim-polyglot'
 Plug 'dense-analysis/ale'
 
 " Clojure REPL support
-Plug 'Olical/conjure', {'tag': 'v4.11.0'}
+Plug 'Olical/conjure', {'tag': 'v4.13.0'}
 
 " Support for s-expressions
 Plug 'guns/vim-sexp'
@@ -84,6 +84,20 @@ Plug 'mattn/calendar-vim'
 "
 " <leader>ww to open the wiki
 Plug 'vimwiki/vimwiki'
+
+
+"------------------------------------------------------------
+" PlantUML
+"
+
+" PlugUML Syntax
+Plug 'aklt/plantuml-syntax'
+
+" Required by plantuml-previewer.vim
+Plug 'tyru/open-browser.vim'
+
+" Live preview of PlantUML
+Plug 'weirongxu/plantuml-previewer.vim'
 
 
 "------------------------------------------------------------
@@ -119,8 +133,8 @@ Plug 'tpope/vim-dadbod'
 "
 Plug 'SirVer/ultisnips'
 
-" Floating Terminal
-Plug 'voldikss/vim-floaterm'
+" Box Drawing
+Plug 'gyim/vim-boxdraw'
 
 call plug#end()
 

@@ -29,6 +29,8 @@ set softtabstop=-1                  " -1 = use shiftwidth
 set spelllang=en_ca                 " I am Canadian!
 set splitright                      " Open vertical splits on the right
 set termguicolors                   " Enables 24-bit RGB color in the TUI
+set virtualedit=block               " Allows block selection to go outside current text
+                                    " Handy for vim-drawbox box drawing
 set wildmode=longest,list           " Wildcard completion
 
 augroup local
@@ -65,10 +67,12 @@ let g:db = 'postgresql://erbium:password@localhost/'
 " deoplete
 let g:deoplete#enable_at_startup = 1
 
+" echodoc
+let g:echodoc_enable_at_startup = 1
+
 " float_preview
 set completeopt-=preview
 let g:float_preview#docked = 1
-let g:float_preview#max_width = 120
 let g:float_preview#max_height = 40 " Still shows truncated docs for Clojure functions. Conjure problem?
 
 " lightline
