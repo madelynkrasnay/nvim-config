@@ -34,3 +34,23 @@ loaded. From within nvim, run the following:
 ```
 
 ...and let it do it's thing, then quit and restart nvim.
+
+## CoC and Clojure
+
+Currently the configuration uses CoC and clojure-lsp for completion. For this
+to work, download the clojure-lsp GraalVM binary and put it on your path
+(`~/.local/bin` on MacOS).
+
+I've configured clojure-lsp on the Erbium project by adding the file
+`.lsp/config.edn` to the project root:
+
+```
+{:source-paths ["src/api-test/clj"
+                "src/dev/clj"
+                "src/main/clj"
+                "test/main/clj"]
+ :auto-add-ns-to-new-files? true}
+```
+
+I also haven't configured CoC to automatically install any CoC plugins, so
+you'll have to run `:CocInstall coc-json`, etc.

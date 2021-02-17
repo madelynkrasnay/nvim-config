@@ -41,10 +41,12 @@ Plug 'dyng/ctrlsf.vim'
 "
 
 " Deoplete autocompleter
-Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+"Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 
 " Show autocomplete preview in NeoVim's floating window
-Plug 'ncm2/float-preview.nvim'
+"Plug 'ncm2/float-preview.nvim'
+
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 
 "------------------------------------------------------------
@@ -57,7 +59,10 @@ Plug 'sheerun/vim-polyglot'
 " Async Linter support
 "
 " Also run: brew install borkdude/brew/clj-kondo
-Plug 'dense-analysis/ale'
+"
+" Currently trying CoC for this.
+"
+"Plug 'dense-analysis/ale'
 
 " Clojure REPL support
 Plug 'Olical/conjure', {'tag': 'v4.13.0'}

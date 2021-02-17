@@ -1,0 +1,13 @@
+{
+    "languageserver": {
+        "clojure-lsp": {
+            //"command": "clojure-lsp",
+            "command": "bash",
+            "args": ["-c", "clojure-lsp"],
+            "filetypes": ["clojure"],
+            "rootPatterns": [".git", "project.clj", "deps.edn"],
+            "additionalSchemes": ["jar", "zipfile"],
+            "trace.server": "verbose"
+        }
+    }
+}
