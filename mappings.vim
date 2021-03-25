@@ -85,14 +85,7 @@ nnoremap <leader>bz :Clap buffers<cr>
 
 nnoremap <leader>ft :NERDTreeToggle<cr>
 nnoremap <leader>ff :NERDTreeFind<cr>
-nnoremap <leader>fl :FloatermNew lf<cr>
-nnoremap <leader>fz :Clap files<cr>
-
-"------------------------------------------------------------
-" Terminal (Floaterm) commands SPC t...
-"------------------------------------------------------------
-
-nnoremap <leader>tn :FloatermNew<cr>
-nnoremap <leader>tt :FloatermToggle<cr>
-nnoremap <leader>tz :Clap floaterm<cr>
-
+nnoremap <leader>fg <cmd>Telescope live_grep<cr>
+nnoremap <leader>fb <cmd>Telescope buffers<cr>
+nnoremap <leader>fh <cmd>Telescope help_tags<cr>
+nnoremap <leader>fz <cmd>Telescope find_files<cr>
