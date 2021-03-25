@@ -60,6 +60,8 @@ let g:ale_linters = {'clojure': ['clj-kondo']} " Disable Joker linting
 " conjure
 " fix lagginess with deoplete completions
 let g:conjure#client#clojure#nrepl#completion#with_context = v:false
+" don't map K, since we use LSP instead
+let g:conjure#mapping#doc_word = v:false
 
 " dadbod
 let g:db = 'postgresql://erbium:password@localhost/'
@@ -78,6 +80,9 @@ let g:float_preview#max_height = 40 " Still shows truncated docs for Clojure fun
 " lightline
 let g:lightline = {}
 let g:lightline.colorscheme = 'gruvbox'
+
+" lsp (native)
+lua require'lspconfig'.clojure_lsp.setup{}
 
 " NERDTree
 let NERDTreeQuitOnOpen=1
