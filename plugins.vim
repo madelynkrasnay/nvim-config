@@ -24,29 +24,25 @@ Plug 'shinchu/lightline-gruvbox.vim'
 " File browser
 Plug 'scrooloose/nerdtree'
 
-" Finder for many things; uses a popup window
-"Plug 'liuchengxu/vim-clap', { 'do': ':Clap install-binary!' }
+" Super fuzzy search in native Lua
+Plug 'nvim-lua/popup.nvim'
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-telescope/telescope.nvim'
 
-" Requires silver searcher to be installed
-" https://github.com/ggreer/the_silver_searcher
-"Plug 'rking/ag.vim'
 
-" Advanced search/replace
-" Opens search results in editable window
-"Plug 'dyng/ctrlsf.vim'
+"------------------------------------------------------------
+" LSP
+"
+
+" Configs for nvim built-in LSP client
+Plug 'neovim/nvim-lspconfig'
 
 
 "------------------------------------------------------------
 " Autocomplete
 "
 
-" Configs for nvim built-in LSP client
-Plug 'neovim/nvim-lspconfig'
-
-" Super fuzzy search in native Lua
-Plug 'nvim-lua/popup.nvim'
-Plug 'nvim-lua/plenary.nvim'
-Plug 'nvim-telescope/telescope.nvim'
+Plug 'hrsh7th/nvim-compe'
 
 
 "------------------------------------------------------------

@@ -57,6 +57,18 @@ let g:airline_theme='tomorrow'
 " ale
 let g:ale_linters = {'clojure': ['clj-kondo']} " Disable Joker linting
 
+" compe
+let g:compe = {}
+let g:compe.enabled = v:true
+let g:compe.source = {}
+let g:compe.enabled = v:true
+let g:compe.source.path = v:true
+let g:compe.source.buffer = v:true
+let g:compe.source.calc = v:true
+let g:compe.source.nvim_lsp = v:true
+let g:compe.source.nvim_lua = v:true
+"let g:compe.source.vsnip = v:true
+
 " conjure
 " fix lagginess with deoplete completions
 let g:conjure#client#clojure#nrepl#completion#with_context = v:false
@@ -65,9 +77,6 @@ let g:conjure#mapping#doc_word = v:false
 
 " dadbod
 let g:db = 'postgresql://erbium:password@localhost/'
-
-" deoplete
-let g:deoplete#enable_at_startup = 1
 
 " echodoc
 let g:echodoc_enable_at_startup = 1

@@ -15,9 +15,14 @@ vnoremap <c-c> "+y
 cnoremap <c-a> <home>
 cnoremap <c-e> <end>
 
-" Map omnicomplete to Ctrl-Space
+" Map completion to Ctrl-Space
 "inoremap <c-space> <c-x><c-o>
-inoremap <silent><expr> <c-space> coc#refresh()
+"inoremap <silent><expr> <c-space> coc#refresh()
+inoremap <silent><expr> <C-Space> compe#complete()
+"inoremap <silent><expr> <CR>      compe#confirm('<CR>')
+"inoremap <silent><expr> <C-e>     compe#close('<C-e>')
+"inoremap <silent><expr> <C-f>     compe#scroll({ 'delta': +4 })
+"inoremap <silent><expr> <C-d>     compe#scroll({ 'delta': -4 })
 
 " Clear highlight with \ (opposite of /)
 nnoremap <silent> \ :noh<cr>
@@ -57,6 +62,8 @@ tnoremap <c-x> <c-\><c-n>:FloatermHide<cr>
 nnoremap <silent> K     <cmd>lua vim.lsp.buf.hover()<CR>
 nnoremap <silent> gr    <cmd>lua vim.lsp.buf.references()<CR>
 nnoremap <silent> gd    <cmd>lua vim.lsp.buf.definition()<CR>
+nnoremap <silent> gA    <cmd>lua vim.lsp.buf.code_action()<CR>
+nnoremap <silent> gR    <cmd>lua vim.lsp.buf.rename()<CR>
 
 
 
