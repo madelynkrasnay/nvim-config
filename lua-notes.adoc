@@ -1,0 +1,81 @@
+= Notes on Using Lua in Neovim
+
+== Neovim and Lua
+
+* Lua code must go in the `lua` subdirectory of some directory on your
+  runtimepath.
+
+* Unlike VimL code, Lua modules must be explicitly required, e.g.
+  `require('foo.bar')` to load `lua/foo/bar.lua`.
+
+* `require('foo/bar')` also works, but the former seems more idiomatic.
+
+* Unlike `.vim` files, `.lua` files are not automatically sourced from special
+  directories in your runtimepath. For example, Neovim can load `plugin/foo.vim`
+  automatically but not `plugin/foo.lua`.
+
+* `require` caches its result, even if the module load fails. To clean this up,
+  run `:lua package.loaded["my_module"]=nil`
+
+----
+:help lua-stdlib
+:help lua-vim
+----
+
+== Lua Language
+
+[source,lua]
+----
+-- comments
+
+local pi = 3.14
+
+local foo = function()
+  print(pi)
+end
+
+local function bar()
+  print("bar!")
+end
+
+-- return table of exported symbols from a module
+return {
+  bar = bar
+}
+----
+
+=== Tables
+
+[source,lua]
+----
+a = {}
+a.foo = blah
+a['foo'] = blargh
+
+for k,v in ipairs(a) do
+  print(v)
+end
+
+a = {'foo', 'bar'}
+a[1] --> 'foo'
+
+-- quotes not required on keys
+-- comma separators required
+a = { foo='bar', baz='quux' }
+
+-- can mix named and positional
+a = { foo='bar', baz='blargh', 'quux', 'frob' }
+a[1] --> 'quux'
+
+-- keys must be identifiers
+-- use square brackets for expressions
+-- mnemonic: same as how you access that element
+a = { ['foo'] = 'bar' }
+a['foo'] --> 'bar'
+a.foo    --> 'bar'
+
+----
+
+== Resources
+
+* https://github.com/nanotee/nvim-lua-guide

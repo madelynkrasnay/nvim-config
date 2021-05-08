@@ -25,3 +25,7 @@ namespace
 dialog
 Stephane
 Sundog
+Lua
+lua
+runtimepath
+Neovim
