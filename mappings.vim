@@ -50,6 +50,9 @@ vnoremap \| :Tab /\|<cr>
 " Hide the floating terminal
 tnoremap <c-x> <c-\><c-n>:FloatermHide<cr>
 
+" Show the given buffer along the top of the tab
+:command! -nargs=? Top :top :new | :b <args>
+
 
 "============================================================
 " Neovim Native LSP Client Config
