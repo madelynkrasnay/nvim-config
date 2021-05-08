@@ -29,6 +29,10 @@ Plug 'nvim-lua/popup.nvim'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
 
+" Requires silver searcher to be installed
+" https://github.com/ggreer/the_silver_searcher
+Plug 'rking/ag.vim'
+
 
 "------------------------------------------------------------
 " LSP
