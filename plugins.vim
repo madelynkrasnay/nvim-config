@@ -106,28 +106,12 @@ Plug 'liuchengxu/vim-which-key'
 " GIT interface
 Plug 'tpope/vim-fugitive'
 
-" Database
-"
-" You need to have a PostgreSQL client installed:
-"
-"   brew install libpq
-"   brew link --force libpq
-"
-" Normal usage: select a range, then type :DB to eval it against the server.
-"
-" See https://github.com/tpope/vim-dadbod/blob/master/doc/dadbod.txt
-"
-Plug 'tpope/vim-dadbod'
-
 " Snippets editor
 "
 " Snippets are in files under ~/.config/nvim/UltiSnips, which is managed by my
 " dotfiles project. They are immediately loaded upon save.
 "
 Plug 'SirVer/ultisnips'
-
-" Box Drawing
-Plug 'gyim/vim-boxdraw'
 
 call plug#end()
 
