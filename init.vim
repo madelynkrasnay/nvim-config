@@ -105,6 +105,16 @@ let g:rainbow_active = 1
 let g:rainbow_conf = {'separately': { 'vimwiki': 0 }}
 colorscheme gruvbox
 
+" telescope
+lua <<EOF
+require('telescope').setup{
+  defaults = {
+    file_sorter = require('telescope.sorters').get_fzy_sorter,
+    generic_sorter = require('telescope.sorters').get_fzy_sorter,
+  }
+}
+EOF
+
 " vimwiki
 let g:vimwiki_list = [{'path': '~/Dropbox/vimwiki/',
                      \ 'links_space_char': '-'}]
