@@ -73,6 +73,6 @@ fun ClojureJ()
     let l:line = substitute(l:line, '\([[{]\)\s\+', '\1', "g")
     call setline('.', l:line)
 endfun
-nnoremap J J:call ClojureJ()<cr>
-vnoremap J J:call ClojureJ()<cr>
+nnoremap <buffer> J J:call ClojureJ()<cr>
+vnoremap <buffer> J J:call ClojureJ()<cr>
 
