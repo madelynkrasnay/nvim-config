@@ -135,6 +135,8 @@ function! Diary()
     endif
 endfunction
 command! Diary call Diary()
+" Search notes: :Ns something
+command! -nargs=1 Ns execute "Ag <args> " . g:notes_dir
 
 
 silent! source .project.vim
