@@ -126,5 +126,15 @@ let g:vimwiki_auto_header = 1
 " Notes
 let g:notes_dir = "~/Dropbox/Notes"
 command! Notes execute "e " . g:notes_dir . "/index.adoc"
+function! Diary()
+    call mkdir(expand(g:notes_dir . strftime("/Diary/%Y/%m")), "p")
+    execute "e " . g:notes_dir . strftime("/Diary/%Y/%m/%F.adoc")
+    if line("$") == 1
+        call append(0, "= " . strftime("%F"))
+        call append(1, "")
+    endif
+endfunction
+command! Diary call Diary()
+
 
 silent! source .project.vim
