@@ -53,7 +53,6 @@ tnoremap <c-x> <c-\><c-n>:FloatermHide<cr>
 " Show the given buffer along the top of the tab
 :command! -nargs=? Top :top :new | :b <args>
 
-
 "============================================================
 " Neovim Native LSP Client Config
 "============================================================
@@ -67,6 +66,9 @@ nnoremap <silent> gr    <cmd>lua vim.lsp.buf.references()<CR>
 nnoremap <silent> gd    <cmd>lua vim.lsp.buf.definition()<CR>
 nnoremap <silent> gA    <cmd>lua vim.lsp.buf.code_action()<CR>
 nnoremap <silent> gR    <cmd>lua vim.lsp.buf.rename()<CR>
+nnoremap <silent> ge    <cmd>lua vim.lsp.diagnostic.show_line_diagnostics()<CR>
+nnoremap <silent> gi    <cmd>lua vim.lsp.buf.incoming_calls()<CR>
+nnoremap <silent> go    <cmd>lua vim.lsp.buf.outgoing_calls()<CR>
 
 
 

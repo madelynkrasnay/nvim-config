@@ -1,5 +1,15 @@
 call plug#begin('~/.local/share/nvim/plugged')
 
+" Plugins To Try
+"
+" https://github.com/sindrets/diffview.nvim
+" https://github.com/ray-x/lsp_signature.nvim
+" LSP Outliners
+"   https://github.com/simrat39/symbols-outline.nvim
+"   https://github.com/stevearc/aerial.nvim
+"   https://github.com/liuchengxu/vista.vim
+"
+
 "------------------------------------------------------------
 " Appearance
 "
@@ -68,6 +78,8 @@ Plug 'Olical/aniseed', { 'tag': 'v3.8.0' }
 " Fennel, a Clojure-like LISP that compiles to Lua
 Plug 'bakpakin/fennel.vim'
 
+" Asciidoc
+Plug 'habamax/vim-asciidoctor'
 
 
 "------------------------------------------------------------

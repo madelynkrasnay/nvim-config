@@ -64,3 +64,15 @@ command! ClojureInsertNs call append(0, clojure#ns_decl())
 nnoremap <buffer> <LocalLeader>gt :ClojureGoToTest<cr>
 nnoremap <buffer> <LocalLeader>n :ClojureInsertNs<cr>
 nnoremap <buffer> <LocalLeader>cp :ConjurePiggieback (figwheel.main.api/repl-env "dev")<cr>
+"
+" By default, J leaves spaces before ] and }
+" Thanks to @Sigve on Clojurians Slack
+fun ClojureJ()
+    let l:line = getline('.')
+    let l:line = substitute(l:line, '\s\+\([]}]\)', '\1', "g")
+    let l:line = substitute(l:line, '\([[{]\)\s\+', '\1', "g")
+    call setline('.', l:line)
+endfun
+nnoremap J J:call ClojureJ()<cr>
+vnoremap J J:call ClojureJ()<cr>
+

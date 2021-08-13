@@ -57,6 +57,9 @@ let g:airline_theme='tomorrow'
 " ale
 let g:ale_linters = {'clojure': ['clj-kondo']} " Disable Joker linting
 
+" asciidoctor
+let g:asciidoctor_syntax_conceal = 1
+
 " compe
 let g:compe = {}
 let g:compe.enabled = v:true
@@ -119,5 +122,9 @@ EOF
 let g:vimwiki_list = [{'path': '~/Dropbox/vimwiki/',
                      \ 'links_space_char': '-'}]
 let g:vimwiki_auto_header = 1
+
+" Notes
+let g:notes_dir = "~/Dropbox/Notes"
+command! Notes execute "e " . g:notes_dir . "/index.adoc"
 
 silent! source .project.vim
