@@ -101,3 +101,10 @@ nnoremap <leader>fg <cmd>Telescope live_grep<cr>
 nnoremap <leader>fb <cmd>Telescope buffers<cr>
 nnoremap <leader>fh <cmd>Telescope help_tags<cr>
 nnoremap <leader>fz <cmd>Telescope find_files<cr>
+
+"------------------------------------------------------------
+" Notes commands SPC n...
+"------------------------------------------------------------
+
+nnoremap <leader>nn :Notes<cr>
+nnoremap <leader>nd :Diary<cr>
